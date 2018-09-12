@@ -508,7 +508,7 @@ private[yarn] class YarnAllocator(
                   driverUrl,
                   executorId,
                   executorHostname,
-                  executorMemory,
+                  executorMemory + memoryOverhead + pysparkWorkerMemory,
                   executorCores,
                   appAttemptId.getApplicationId.toString,
                   securityMgr,
